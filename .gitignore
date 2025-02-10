@@ -107,7 +107,7 @@ package-lock.json
 
 # env variables
 .env
-env.js
+
 
 # temp files
 *.tmp

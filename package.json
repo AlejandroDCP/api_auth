@@ -4,7 +4,7 @@
   "description": "Servico de login",
   "main": "./dist/index.js",
   "scripts": {
-    "prebuild": "del /s /q dist",
+    "prebuild": "rm -rfv dist",
     "build": "babel src -d dist",
     "prestart": "npm run build",
     "start": "node dist/clusterApp.js",
@@ -57,3 +57,5 @@
     "prettier": "^2.7.1"
   }
 }
+
+
