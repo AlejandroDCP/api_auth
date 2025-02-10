@@ -1,0 +1,59 @@
+{
+  "name": "login-microservice",
+  "version": "0.1.1",
+  "description": "Servico de login",
+  "main": "./dist/index.js",
+  "scripts": {
+    "prebuild": "del /s /q dist",
+    "build": "babel src -d dist",
+    "prestart": "npm run build",
+    "start": "node dist/clusterApp.js",
+    "dev": "export DEBUG=1; nodemon -w ./src --exec npx babel-node ./src/index.js",
+    "dev:win": "nodemon -w ./src --exec npx babel-node ./src/index.js",
+    "prepm2:install": "npm run build",
+    "prepm2:start": "npm run build",
+    "pm2:install": "npx pm2 start dist/clusterApp.js --name aut-api --log-date-format=\"YYYY-MM-DD HH:mm:ss.SSS\" --log log/aut-api.log --error log/aut-api-error.log --time",
+    "pm2:start": "npx pm2 restart aut-api",
+    "pm2:stop": "npx pm2 stop aut-api",
+    "pm2:delete": "npx pm2 delete aut-api",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DevCadu",
+  "license": "ISC",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cadu-inmobiliaria/test-auth-google.git"
+  },
+  "bugs": {
+    "url": " https://github.com/cadu-inmobiliaria/test-auth-google.git"
+  },
+  "homepage": " https://github.com/cadu-inmobiliaria/test-auth-google.git",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-validator": "^6.15.0",
+    "google-auth-library": "^8.7.0",
+    "googleapis": "^110.0.0",
+    "helmet": "^6.0.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.0",
+    "log4js": "^6.8.0",
+    "luxon": "^3.2.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.11.4",
+    "odbc": "^2.4.4",
+    "qrcode": "^1.5.1",
+    "rotating-file-stream": "^3.0.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "nodemon": "^3.0.2",
+    "prettier": "^2.7.1"
+  }
+}
