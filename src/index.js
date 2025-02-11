@@ -15,10 +15,10 @@ app.use(express.static(path.join(__dirname, '../public')))
 app.use(express.urlencoded({ extended: false }))
 
 //Security
-app.use(cors())
-app.use(hpp())
-app.use(helmet())
-app.disable('x-powered-by')
+// app.use(cors())
+// app.use(hpp())
+// app.use(helmet())
+// app.disable('x-powered-by')
 
 if (DEBUG ?? process.env.DEBUG == 1) {
   console.log('🔊 DEBUG MODE ON');
