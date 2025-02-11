@@ -112,3 +112,5 @@ package-lock.json
 # temp files
 *.tmp
 temp/*
+
+api_auth.zip

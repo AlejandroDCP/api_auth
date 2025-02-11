@@ -2,7 +2,7 @@
   "name": "login-microservice",
   "version": "0.1.1",
   "description": "Servico de login",
-  
+  "main": "./dist/index.js",
   "scripts": {
     "prebuild": "rm -rfv dist",
     "build": "babel src -d dist",
