@@ -31,7 +31,7 @@ const GOOGLE = {
   const JWT_PEM_PATH = 'C:\\change_log\\zelda_api/llaves2/jwtRS256.pem';
   // const JWT_PEM_PATH = '../zelda_api/llaves2/jwtRS256.pem';
   
-  const PORT = 5004;
+  const PORT = 8080;
   const BUCKETS = {
     QR: 'C:\\TEMP',
   }
@@ -47,3 +47,7 @@ const GOOGLE = {
     DEBUG: 0,
     DEBUG_LEVEL: 3
   };
+
+
+
+  
